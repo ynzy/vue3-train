@@ -17,7 +17,7 @@ enum Direction1 {
   Left = "LEFT",
   Right = "RIGHT",
 }
-const value = "UP";
-if (value === Direction1.Up) {
+const value1 = "UP";
+if (value1 === Direction1.Up) {
   console.log("go up!");
 }

@@ -1,14 +1,14 @@
-function echo(arg) {
-  return arg;
-}
-const result = echo(123);
+// function echo(arg) {
+//   return arg;
+// }
+// const result = echo(123);
 // 这时候我们发现了一个问题，我们传入了数字，但是返回了 any
 
-// function echo<T>(arg: T): T {
-//   return arg
-// }
+function echo<T>(arg: T): T {
+  return arg;
+}
 
-// const result = echo(123)
+const result = echo<number>(123);
 
 // 泛型也可以传入多个值
 function swap<T, U>(tuple: [T, U]): [U, T] {
@@ -39,7 +39,7 @@ const obj = echoWithLength({ length: 10 });
 const arr2 = echoWithLength([1, 2, 3]);
 // const num = echoWithLength(112)
 
-/* class Queue<T> {
+class Queue<T> {
   private data = [];
   push(item: T) {
     return this.data.push(item);
@@ -47,16 +47,16 @@ const arr2 = echoWithLength([1, 2, 3]);
   pop(): T {
     return this.data.shift();
   }
-} */
-class Queue {
-  private data = [];
-  push(item) {
-    return this.data.push(item);
-  }
-  pop() {
-    return this.data.shift();
-  }
 }
+// class Queue {
+//   private data = [];
+//   push(item) {
+//     return this.data.push(item);
+//   }
+//   pop() {
+//     return this.data.shift();
+//   }
+// }
 const queue = new Queue();
 queue.push(1);
 queue.push("str");

@@ -1,1 +1,1 @@
-declare var jQuery: (slector: string) => any
+declare var jQuery: (slector: string) => any;

@@ -2,7 +2,7 @@
 let isDone: boolean = false;
 let age: number = 10;
 
-let firstName: string = "dsafklj";
+let firstName = "dsafklj";
 let message: string = `hello ${age}`;
 
 let u: undefined = undefined;
@@ -16,3 +16,4 @@ let symoblType: symbol = Symbol();
 let notSure: any = 4;
 notSure = "dsfa";
 notSure = true;
+notSure.change();

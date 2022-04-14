@@ -13,7 +13,7 @@ Math.pow(2, 3);
 // DOM and BOM
 let body = document.body;
 let allLis = document.querySelectorAll("li");
-allLis.keys();
+// allLis.keys();
 
 document.addEventListener("click", (e) => {
   e.preventDefault();

@@ -1,22 +1,31 @@
 // 封装
-class Animal {
-  name: any;
-  constructor(name) {
-    this.name = name;
-  }
-  run() {
-    return `${this.name} is running`;
-  }
-}
-
 // class Animal {
-//   constructor(public name) {
+//   name: any;
+//   constructor(name) {
 //     this.name = name;
 //   }
 //   run() {
 //     return `${this.name} is running`;
 //   }
 // }
+
+class Animal {
+  /**
+   * 这是一个名字
+   * @param name 
+   */
+  public name: any
+  constructor(name) {
+    this.name = name;
+  }
+  /**
+   * 这是一个跑的方法
+   * @returns 
+   */
+  run() {
+    return `${this.name} is running`;
+  }
+}
 
 const snake = new Animal("lily");
 console.log(snake.run());

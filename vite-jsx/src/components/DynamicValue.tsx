@@ -1,3 +1,7 @@
+
+/**
+ * jsx 动态绑定值
+ */
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
     setup() {

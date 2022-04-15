@@ -1,1 +1,3 @@
-export default 'test'
+export default () => {
+    console.log('test');
+};

@@ -21,9 +21,10 @@ export default defineComponent({
     SlotScope,
     TestA
   },
-  props: {},
   setup(props) {
-    return {};
+    return {
+      msg: 'SFC 中使用 jsx'
+    };
   }
 });
 </script>

@@ -1,5 +1,5 @@
 /**
- * 作用域插槽
+ * jsx作用域插槽
  */
 import { defineComponent } from 'vue';
 export default defineComponent({

@@ -14,6 +14,11 @@ import { httpIntercept } from '@/hooks/intercept';
 import { provide } from 'vue';
 provide('user', useUserInfo());
 
+const f_token = Symbol();
+type FeatureToken = typeof useNewFeature & { token: symbol };
+(useFeature as FeatureToken).token = f_token;
+(useNewFeature as FeatureToken).token = f_token;
+
 // 旧功能
 // useProvider(useFeature);
 // 新功能

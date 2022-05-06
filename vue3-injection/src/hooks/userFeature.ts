@@ -1,8 +1,8 @@
-import { ref } from "vue";
-import { f_token } from "./const";
+import { ref } from 'vue';
+import { f_token } from './const';
 
 export function useFeature() {
-  const msg = "一个功能use";
+  const msg = '一个功能use';
   const count = ref(0);
   const increment = () => {
     return count.value++;
@@ -10,8 +10,8 @@ export function useFeature() {
   return {
     msg,
     count,
-    increment,
+    increment
   };
 }
 
-useFeature.token = f_token;
+// useFeature.token = f_token;

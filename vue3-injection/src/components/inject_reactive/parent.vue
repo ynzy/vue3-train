@@ -1,13 +1,18 @@
 <script setup lang="ts">
 // Parent.vue
-import { provide, reactive } from 'vue';
+import { provide, reactive, watch, watchEffect } from 'vue';
 import child from './child.vue';
 
 const obj = reactive({
   name: 'bob',
   age: 20
 });
-
+// watch(
+//   () => obj,
+//   (v) => {
+//     console.log(v);
+//   }
+// );
 provide('person', obj);
 </script>
 <template>

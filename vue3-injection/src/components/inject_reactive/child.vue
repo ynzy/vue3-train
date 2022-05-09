@@ -10,5 +10,5 @@ setTimeout(() => {
 }, 3000);
 </script>
 <template>
-  <div>我叫{{ person?.name }} 我的年龄：{{ person?.age }}</div>
+  <div>我叫{{ person && person.name }} 我的年龄：{{ person?.age }}</div>
 </template>

@@ -22,7 +22,8 @@ type FeatureToken = typeof useNewFeature & { token: symbol };
 // 旧功能
 // useProvider(useFeature);
 // 新功能
-useProvider(useNewFeature);
+const feature = useProvider(useNewFeature);
+console.log('appvue', feature);
 
 // 在这里注入拦截器，下文才能获取到
 useProvider(httpIntercept);

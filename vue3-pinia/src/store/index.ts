@@ -3,7 +3,7 @@ import { useCounterStoreForSetup } from '@/store/counterForSetup';
 import { useCounterStoreForOption } from '@/store/counterForOptions';
 
 const appStore: any = {};
-
+// window.appStore = appStore;
 /**
  * 注册app状态库
  */

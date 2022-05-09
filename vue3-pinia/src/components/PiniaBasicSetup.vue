@@ -2,6 +2,8 @@
 import { storeToRefs } from 'pinia';
 import appStore from '@/store';
 
+console.log(appStore.useCounterStoreForSetup);
+
 // setup composition API模式
 const { count } = storeToRefs(appStore.useCounterStoreForSetup);
 const { increment, doubleCount } = appStore.useCounterStoreForSetup;

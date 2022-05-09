@@ -10,3 +10,4 @@ app.use(createPinia());
 registerStore();
 
 app.mount('#app');
+// window.vm = app;

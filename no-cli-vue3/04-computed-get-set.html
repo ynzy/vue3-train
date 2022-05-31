@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div>{{ count }}</div>
+    <button @click="increment">{{plusOne}}</button>
+  </div>
+  <script>
+    const { createApp, ref, computed } = Vue
+    createApp({
+      setup() {
+        const count = ref(1);
+        function increment() {
+          plusOne.value++
+        }
+        const plusOne = computed({
+          get: () => {
+            return count.value + 1;
+          },
+          set: (val) => {
+            console.log(val);
+            count.value = val * 2;
+          },
+        });
+        console.log(plusOne.value);
+        return {
+          count,
+          plusOne,
+          increment
+        };
+      },
+    }).mount('#app')
+  </script>
+</body>
+
+</html>

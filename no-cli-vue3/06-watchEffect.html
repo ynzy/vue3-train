@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+  <script>
+    const { createApp, ref, watchEffect, onMounted } = Vue
+    createApp({
+      setup() {
+        const count = ref(1);
+        /**
+         * 1. 先立即执行传入的函数
+         * 2. 当函数内依赖的数据发生变化时，会再次执行函数
+         */
+        watchEffect(() => {
+          console.log(count.value);
+        });
+        onMounted(() => {
+          console.log('mounted');
+        })
+        setTimeout(() => {
+          count.value++;
+        }, 3000);
+        return {
+        };
+      },
+    }).mount('#app')
+  </script>
+</body>
+
+</html>

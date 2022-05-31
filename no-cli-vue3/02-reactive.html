@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="increment">
+      Count is: {{ state.count }}
+    </button>
+  </div>
+  <script>
+    const { createApp, reactive } = Vue
+    createApp({
+      setup() {
+        const state = reactive({ count: 0 });
+        function increment() {
+          state.count++;
+        }
+        // 不要忘记同时暴露 increment 函数
+        return {
+          state,
+          increment,
+        };
+      },
+    }).mount('#app')
+  </script>
+</body>
+
+</html>

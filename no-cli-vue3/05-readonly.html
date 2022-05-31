@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+  <script>
+    const { createApp, ref, readonly } = Vue
+    createApp({
+      setup() {
+        const state = reactive({
+          count: 1,
+        });
+        const proxy = readonly(state);
+        console.log(state.count);
+        console.log(proxy.count);
+
+        //! 代理对象只读的，不允许修改
+        // proxy.count++ 
+
+        //! 修改原始对象时代理对象也会响应式变化
+        state.count++;
+        console.log(state.count);
+        console.log(proxy.count);
+        return {
+
+        };
+      },
+    }).mount('#app')
+  </script>
+</body>
+
+</html>
